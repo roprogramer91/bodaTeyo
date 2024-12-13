@@ -1,0 +1,263 @@
+/* Variables de colores */
+:root {
+  --primary-purple: #933ab1b4;
+  --morning-purple: #6d4f98cc;
+  --subtle-purple: #686083;
+  --bright-pink: #f783ac;
+  --bright-blue: #0dbed7;
+  --hover-blue: #007b92;
+  --white: #ffffff;
+}
+
+/* Portada */
+.cover-image {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.cover-image img {
+  margin-top: 50px;
+  width: 200px; /* Tamaño del círculo */
+  height: 200px;
+  object-fit: cover; /* Asegura que la imagen se recorte bien */
+  border-radius: 50%; /* Convierte la imagen en un círculo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del marco */
+  border: 5px solid var(--white); /* Añade un borde blanco al círculo */
+}
+
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: var(--primary-purple);
+
+  background-image: url('assets/img/fondo_globos.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  position: relative; /* Necesario para los pseudo-elementos */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco con opacidad de 50% */
+  z-index: -1; /* Asegura que el pseudo-elemento quede detrás del contenido */
+}
+
+.invitation-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Fondo blanco del contador */
+.countdown {
+  background-color: var(--white);
+  font-size: 1.5rem;
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--bright-blue);
+}
+
+/* Títulos */
+h1, h2, h3, #subtitulo2 {
+  margin: 20px 0;
+}
+
+h1 {
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--morning-purple);
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+h3 {
+  color: var(--bright-pink);
+  font-weight:lighter;
+}
+
+#subtitulo2 {
+  color: var(--bright-blue);
+  font-weight: normal;
+}
+
+/* Detalles del evento */
+
+.links{
+text-decoration: none;
+color: var(--bright-blue);
+font-weight: normal;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+transition: color 0.3s ease, transform 0.3s ease;
+cursor: pointer;
+}
+
+.links::after {
+  content: '>'; /* Agrega el ícono de flecha hacia abajo */
+  font-size: 1.2rem; /* Tamaño de la flecha */
+  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza los cambios en la flecha */
+}
+
+.links:hover {
+  color: var(--bright-pink); /* Cambia a un color más claro al pasar el mouse */
+}
+
+.links:hover::after {
+  color: var(--morning-purple); /* Cambia también el color de la flecha */
+  transform: translateX(5px); /* Desplaza la flecha hacia abajo */
+}
+
+.event-details p {
+  color: var(--morning-purple);
+  font-size: 1rem;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+/* Botones */
+#confirm-button, form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--bright-blue);
+  color: white;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+#confirm-button:hover, form button:hover {
+  background-color: var(--hover-blue);
+}
+
+.confirmation-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+#whatsapp-button:hover {
+  background-color: #1ebe5a;
+}
+
+
+/* Formulario */
+#confirmation-section {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pregunta 1: ¿Nos podrás acompañar? */
+.pregunta1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pregunta1 label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Pregunta 2: ¿Qué crees que es, niña o niño? */
+.pregunta2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pregunta2 label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre ícono y texto */
+}
+
+/* Campos de texto: Nombre y apellido */
+.nombre-apellido {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+.Titulos-label{
+  color: var(--morning-purple);
+  font-weight:bold;
+}
+
+.input-nombre-apellido {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo general del formulario */
+form label {
+  font-weight: normal;
+  text-align: center;
+  
+}
+
+form h3 {
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+/* Ocultar elementos */
+.hidden {
+  display: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  form button {
+    font-size: 0.9rem;
+    align-self: center;
+  }
+}

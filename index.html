@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Shower Invitación</title>
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <!-- Portada -->
+    <div class="cover-image">
+        <img src="assets/img/rosaclaro-celeste.png" alt="Portada">
+    </div>
+
+  <main class="invitation-container">
+    <!-- Títulos con íconos -->
+    <h2> ¿Es niño o niña?</h2>
+    <h1> ¡Ámbar ya lo sabe!</h1>
+    <!-- Link al formulario -->
+    <a href="#confirmation-section" class="links">
+     ¡Averígualo con nosotros!
+    </a>
+
+    <!-- Contador -->
+    <div class="countdown" id="countdown">
+      <span id="days">00</span>Días
+      <span id="hours">00</span>Horas
+      <span id="minutes">00</span>Minutos
+      <span id="seconds">00</span>Segundos
+    </div>
+
+    <!-- Subtítulos -->
+    <h2 id="subtitulo2">Teinvitamos a celebrar nuestro...</h2>
+    <h1>Baby Shower y fiesta de Hermana Mayor</h1>
+    <h3>¡Traé tu traje de baño y muchas ganas de divertirte!</h3>
+
+    <!-- Fecha, hora y lugar -->
+    <div class="event-details">
+      <p><i class="fas fa-calendar-alt"></i> Fecha: <strong>8 de Diciembre</strong></p>
+      <p><i class="fas fa-clock"></i> Hora: <strong>14:30 hrs</strong></p>
+      <p><i class="fas fa-map-marker-alt"></i> Lugar: <a class="links" href="https://www.google.com.ar/maps/place/C.+los+Robles+259,+B1627+Matheu,+Provincia+de+Buenos+Aires/@-34.3774008,-58.8200276,19z/data=!4m16!1m9!3m8!1s0x95bb61fb7da57abf:0xd429a1d74c7e9336!2sC.+los+Robles+259,+B1627+Matheu,+Provincia+de+Buenos+Aires!3b1!8m2!3d-34.3774623!4d-58.81987!10e5!16s%2Fg%2F11fwf5xkz0!3m5!1s0x95bb61fb7da57abf:0xd429a1d74c7e9336!8m2!3d-34.3774623!4d-58.81987!16s%2Fg%2F11fwf5xkz0?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en Google Maps</a></p>
+    </div>
+
+    <!-- Botón para confirmar -->
+    <button id="confirm-button">
+      <i class="fas fa-check-circle"></i> Confirmar asistencia
+    </button>
+
+
+    <!-- Formulario oculto -->
+    <section id="confirmation-section" class="hidden">
+        <form id="confirmation-form">
+        <div class="pregunta1">
+        <h2> ¿Nos podrás acompañar?</h2>
+ 
+          <label>
+            <input type="radio" name="attendance" value="Asistira" required>
+             ¡Sí! Ahí estaré
+          </label>
+          <label>
+            <input type="radio" name="attendance" value="Cancelado" required>
+             Lo siento, no podré
+          </label>
+            </div>
+
+            <div class="nombre-apellido">
+          <label for="first-name" class="Titulos-label">Nombre:</label>
+          <input type="text" id="first-name" name="firstName" class="input-nombre-apellido" required>      
+          <label for="last-name" class="Titulos-label">Apellido:</label>
+          <input type="text" id="last-name" name="lastName" class="input-nombre-apellido" required>
+            </div>
+
+        <div class="pregunta2">
+          <h3>¿Qué crees que es, niña o niño?</h3>
+
+          <label>
+            <input type="radio" name="guess" value="Nena" required>
+            <i class="fas fa-girl"></i> Es una niña
+          </label>
+
+          <label>
+            <input type="radio" name="guess" value="Nene" required>
+            <i class="fas fa-boy"></i> Es un niño
+          </label>
+      
+          <button type="submit" id="confirm-button">
+            <i class="fas fa-paper-plane"></i> Confirmar
+          </button>
+
+        </div>
+        
+    </form>
+      
+</section>
+
+    <!-- Botón para confirmar con Whatsapp-->
+    <div class="confirmation-options">
+      <a id="whatsapp-button" href="https://wa.me/5491131080805?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20al%20BabyShower!." target="_blank">
+          Confirmar por WhatsApp
+      </a>
+  </div>  
+
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>

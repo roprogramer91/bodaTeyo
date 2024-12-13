@@ -1,0 +1,135 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111b21; /* Fondo principal (WhatsApp-like) */
+    color: #d9dee0; /* Texto claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #00a884; /* Verde característico de WhatsApp */
+    text-align: center;
+}
+
+/* Login Container */
+#login-container{
+    background: #202c33; /* Fondo de caja */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#panel-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #272626;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative; /* Asegura que los elementos hijos estén dentro */
+}
+
+/* Encabezado del panel */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Línea separadora */
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #00a884;
+}
+
+button {
+    padding: 10px;
+    background-color: #00a884;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #00785c;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Contador */
+.counter {
+    background-color: #25d366; /* Verde WhatsApp */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 0;
+    flex: 1; /* Ajusta el tamaño dentro del header */
+}
+
+
+/* Botón de cerrar sesión */
+#logout-button {
+    background-color: #ff5252; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px; /* Separación del contador */
+}
+
+#logout-button:hover {
+    background-color: #ff3b3b;
+}
+
+/* Lista de invitados */
+#invitados-list {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #272626;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-height: 400px; /* Limita la altura */
+    overflow-y: auto; /* Permite scroll si la lista es muy larga */
+}
+
+/* Invitado individual */
+#invitados-list div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #272626;
+    border-radius: 5px;
+    background-color: #25d366;
+}
